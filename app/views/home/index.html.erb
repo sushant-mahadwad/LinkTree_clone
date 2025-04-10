@@ -1,2 +1,9 @@
-<h1>SUSHANT</h1>
-<h3><%= link_to "New Tree", new_tree_path %></h3>
+<%= stylesheet_link_tag "indexPage" %>
+<div class="index-page">
+<h1 class="index-page-heading">SUSHANT</h1>
+ <%# <%=  link_to "pricing"%>
+<h3 class='new-tree'><%= link_to "New Tree", new_tree_path %></h3>
+<%if current_user%>
+<%= link_to "View my tree", current_user.tree %>
+<%end%>
+</div>
